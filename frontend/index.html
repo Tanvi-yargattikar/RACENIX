@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RACENIX | Decoding Performance</title>
+    <link rel="stylesheet" href="/landing.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+        <div class="nav-content">
+            <div class="logo racenix-logo">
+                <span class="logo-text">RACE<span class="logo-accent">NIX</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard.html" class="nav-cta">ENTER THE ENGINE</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="mesh-gradient">
+                <div class="mesh-blob blob-1"></div>
+                <div class="mesh-blob blob-2"></div>
+                <div class="mesh-blob blob-3"></div>
+            </div>
+            <div class="vignette-overlay"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="ambient-line top-left"></div>
+        <div class="ambient-line bottom-right"></div>
+
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="hero-badge">PERFORMANCE REDEFINED</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="word historical">HISTORICAL</span> 
+                <span class="word pace">PACE</span><br>
+                <span class="accent word">DECODED</span>
+            </h1>
+            <h3 class="hero-decoded-sub">Decoding Performance.</h3>
+            <p class="hero-subtitle">Discover the hidden patterns of racing. We turn complex telemetry data into clear, simple insights&mdash;revealing the most reliable drivers of all time.</p>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>SCROLL TO EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- Stats Ribbon -->
+    <div class="stats-ribbon">
+        <div class="ribbon-track">
+            <div class="stat-item"><span>70+ YEARS HISTORICAL TELEMETRY</span></div>
+            <div class="stat-sep">/</div>
+            <div class="stat-item"><span>STOCHASTIC PERFORMANCE MODELING</span></div>
+            <div class="stat-sep">/</div>
+            <div class="stat-item"><span>NEURAL ERA-WEIGHTING</span></div>
+            <div class="stat-sep">/</div>
+            <div class="stat-item"><span>REAL-TIME DATA AGGREGATION</span></div>
+            <div class="stat-sep">/</div>
+            <div class="stat-item"><span>MULTIVARIATE VARIANCE ENGINE</span></div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="stat-sep">/</div>
+            <div class="stat-item"><span>70+ YEARS HISTORICAL TELEMETRY</span></div>
+            <div class="stat-sep">/</div>
+            <div class="stat-item"><span>STOCHASTIC PERFORMANCE MODELING</span></div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features w-full">
+        <div class="animated-red-line"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="label">ENGINEERING SPECIFICATIONS</span>
+                <h2 class="reveal-text">THE ARCHITECTURE OF CONSISTENCY</h2>
+                <div class="line"></div>
+                <p class="section-desc">Bypass surface-level stats. We deploy high-dimensional modeling to extract clarity from 70 years of peak competition telemetry.</p>
+            </div>
+
+            <div class="feature-grid f-grid">
+            <div class="feature-card f-card glass-card">
+                <div class="card-bg-grid"></div>
+                <div class="telemetry-line"></div>
+                <div class="card-icon"><i data-lucide="activity"></i></div>
+                <h3>VARIANCE ANALYSIS</h3>
+                <p>Quantifies performance oscillations to isolate pure driver stability metrics.</p>
+            </div>
+            <div class="feature-card f-card glass-card">
+                <div class="card-bg-grid"></div>
+                <div class="telemetry-line"></div>
+                <div class="card-icon"><i data-lucide="layers"></i></div>
+                <h3>ERA-NORMALIZATION</h3>
+                <p>Multi-stage coefficient model neutralizing car dominance and rule changes.</p>
+            </div>
+            <div class="feature-card f-card glass-card">
+                <div class="card-bg-grid"></div>
+                <div class="telemetry-line"></div>
+                <div class="card-icon"><i data-lucide="gauge"></i></div>
+                <h3>DRIVE EFFICIENCY</h3>
+                <p>Calculates the conversion delta between qualifying output and race trajectory.</p>
+            </div>
+            <div class="feature-card f-card glass-card">
+                <div class="card-bg-grid"></div>
+                <div class="telemetry-line"></div>
+                <div class="card-icon"><i data-lucide="cpu"></i></div>
+                <h3>ATTRITION METRICS</h3>
+                <p>Advanced filtering isolating driver errors from mechanical retirement instances.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Section -->
+    <section id="tech" class="tech w-full">
+        <div class="container">
+            <div class="tech-content">
+            <div class="tech-text">
+                <span class="label">DATA INFRASTRUCTURE</span>
+                <h2>VECTOR ANALYTICAL<br><span class="accent-line">CORE</span></h2>
+                <p>Built on a high-performance Python backbone, our engine handles complex aggregations on 70+ years of
+                    racing data in real-time. This isn't just a database; it’s a simulation of historical
+                    performance.</p>
+
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon"><i data-lucide="database"></i></div>
+                        <div class="tech-info">
+                            <h4>PANDAS CORE</h4>
+                            <p>High-speed vector processing for multi-stage data merging and cleaning.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon"><i data-lucide="zap"></i></div>
+                        <div class="tech-info">
+                            <h4>FLASK API</h4>
+                            <p>Asynchronous REST endpoints delivering predictive analytics in milliseconds.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon"><i data-lucide="bar-chart-3"></i></div>
+                        <div class="tech-info">
+                            <h4>CHART.JS 4.0</h4>
+                            <p>Hardware-accelerated canvas rendering for all-time performance trends.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon"><i data-lucide="sparkles"></i></div>
+                        <div class="tech-info">
+                            <h4>GSAP ENGINE</h4>
+                            <p>Cinematic transitions and interactive scrollytelling for a premium UX.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-visual-container">
+                <div class="tech-visual">
+                    <div class="visual-circle outer"></div>
+                    <div class="visual-circle middle"></div>
+                    <div class="visual-circle inner">
+                        <div class="data-stream"></div>
+                        <span class="logo-text inner-logo">RACE<span class="logo-accent">NIX</span></span>
+                    </div>
+                    <div class="tech-node top"><span>DATA</span></div>
+                    <div class="tech-node right"><span>LOGIC</span></div>
+                    <div class="tech-node bottom"><span>VIEW</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo racenix-logo">
+                <span class="logo-text">RACE<span class="logo-accent">NIX</span></span>
+            </div>
+            <div class="footer-links">
+                <p class="copyright">&copy; 2026 RACENIX. DECODING PERFORMANCE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/landing.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

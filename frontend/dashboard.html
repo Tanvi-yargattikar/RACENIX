@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RACENIX | Professional Analytics</title>
+    <link rel="stylesheet" href="/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Main Application UI -->
+    <div id="app-ui" class="app-ui">
+        <div class="app-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <a href="/" class="logo-link">
+                    <div class="logo-container racenix-logo">
+                        <div class="logo-icon">R</div>
+                        <span class="logo-text">ACE<span class="logo-accent">NIX</span></span>
+                    </div>
+                </a>
+
+                <nav class="main-nav">
+                    <div class="nav-item" id="nav-home" onclick="window.location.href='/'">
+                        <i data-lucide="home"></i>
+                        <span>HOME</span>
+                    </div>
+                    <div class="nav-item active" id="nav-dashboard" onclick="switchView('dashboard')">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span>DASHBOARD</span>
+                    </div>
+                    <div class="nav-item" id="nav-ranking" onclick="switchView('ranking')">
+                        <i data-lucide="trophy"></i>
+                        <span>WORLD RANKING</span>
+                    </div>
+                    <div class="nav-item" id="nav-compare" onclick="switchView('compare')">
+                        <i data-lucide="git-compare"></i>
+                        <span>COMPARE</span>
+                    </div>
+                </nav>
+
+                <div class="sidebar-info">
+                    <div class="status-card">
+                        <div class="pulse"></div>
+                        <div class="status-content">
+                            <span class="status-label">ENGINE STATUS</span>
+                            <span class="status-value">LIVE ENGINE</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Wrapper -->
+            <div class="main-wrapper">
+                <main class="main-content">
+                    <!-- Dashboard View -->
+                    <section id="dashboard-view" class="view">
+                        <header class="content-header">
+                            <div class="header-title">
+                                <h1>PERFORMANCE ANALYTICS</h1>
+                                <p>Advanced cross-season consistency modeling</p>
+                            </div>
+                            <div class="header-controls">
+                                <select id="year-select" class="premium-select"></select>
+                            </div>
+                        </header>
+
+                        <div class="stat-row">
+                            <div class="stat-box">
+                                <span class="label">DATABASE</span>
+                                <span class="value" id="stat-races">--</span>
+                                <span class="sub">HISTORICAL RACES</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="label">DRIVERS</span>
+                                <span class="value" id="stat-drivers">--</span>
+                                <span class="sub">UNIQUE ENTRIES</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="label">RANGE</span>
+                                <span class="value" id="stat-seasons">--</span>
+                                <span class="sub">SEASONS ANALYZED</span>
+                            </div>
+                        </div>
+
+                        <div class="grid-layout">
+                            <div class="card glass-card main-chart">
+                                <div class="card-header">
+                                    <h2>Top 10 Consistency Scores</h2>
+                                    <span class="badge" id="display-year">--</span>
+                                </div>
+                                <div class="chart-wrapper">
+                                    <canvas id="top10Chart"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="card glass-card side-panel">
+                                <div class="card-header">
+                                    <h2>Trend Analysis</h2>
+                                    <select id="trend-driver-select" class="small-select"></select>
+                                </div>
+                                <div class="chart-wrapper small-chart">
+                                    <canvas id="trendChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Ranking View -->
+                    <section id="ranking-view" class="view hidden">
+                        <header class="content-header">
+                            <div class="header-title">
+                                <h1>CURRENT SEASON RANKING</h1>
+                                <p>Minimum 3 races eligibility threshold</p>
+                            </div>
+                            <div class="search-wrapper">
+                                <i data-lucide="search"></i>
+                                <input type="text" id="ranking-search" placeholder="Search driver history...">
+                            </div>
+                        </header>
+
+                        <div class="table-container glass-card">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>DRIVER</th>
+                                        <th>RACES</th>
+                                        <th>AVG FINISH</th>
+                                        <th>DNF RATE</th>
+                                        <th>CONSISTENCY</th>
+                                        <th>PROFILE</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ranking-body"></tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Compare View -->
+                    <section id="compare-view" class="view hidden">
+                        <header class="content-header">
+                            <div class="header-title">
+                                <h1>HEAD-TO-HEAD COMPARISON</h1>
+                                <p>Direct statistical correlation between two legends</p>
+                            </div>
+                        </header>
+
+                        <div class="compare-controls">
+                            <select id="compare-a" class="premium-select"></select>
+                            <div class="vs-divider">VS</div>
+                            <select id="compare-b" class="premium-select"></select>
+                        </div>
+
+                        <div id="compare-results" class="compare-grid">
+                            <!-- Comparison cards injected by JS -->
+                        </div>
+
+                        <div class="card glass-card comparison-chart-card hidden" id="compare-chart-container">
+                            <div class="card-header">
+                                <h2>Trend Correlation</h2>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="compareChart"></canvas>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+        <p>INITIALIZING HEARTBEAT...</p>
+    </div>
+
+    <script type="module" src="/script.js"></script>
+</body>
+
+</html>

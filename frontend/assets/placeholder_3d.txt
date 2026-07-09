@@ -1,0 +1,8 @@
+Please place your realistic or purchased Formula 1 3D model in this directory.
+
+IMPORTANT instructions for smooth integration:
+1. Ensure the file is a properly exported GLTF (.glb)
+2. Rename the file EXACTLY to: `f1_car.glb`
+3. Drop it inside: `c:\Users\Tanvi\OneDrive\Desktop\Racenix\frontend\assets\`
+
+The Three.js cinematic script will automatically find it, dynamically scale it, center it, and attach it to the scrollytelling lighting/motion timelines!
