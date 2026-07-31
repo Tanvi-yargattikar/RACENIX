@@ -1,4 +1,4 @@
-# 🏎️ F1 Consistency Engine: Advanced Performance Analytics
+# 🏎️ RACENIX: Advanced Performance Analytics
 
 A professional-grade Data Analytics & Visualization platform to quantify Formula 1 driver consistency using historical race data (1950 - Present).
 
