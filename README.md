@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/14bc7d3d-c347-4e0a-9cac-1b8aa32b2a14
 # 🏎️ RACENIX: Advanced Performance Analytics
 
 A professional-grade Data Analytics & Visualization platform to quantify Formula 1 driver consistency using historical race data (1950 - Present).
@@ -35,4 +37,10 @@ To ensure professional-level insights, the platform implements a three-stage ana
 - Deep dive into constructor-specific consistency analysis.
 
 ---
+## Project Demo
+
+
+
+https://github.com/user-attachments/assets/8fe252ee-7246-40ee-a63a-97b2dda47589
+
 *Created by [Your Name] as a demonstration of Full-Stack Data Engineering and Visualization.*
